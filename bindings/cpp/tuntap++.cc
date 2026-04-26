@@ -124,17 +124,13 @@ tuntap::ip(std::string const &s, int netmask)
 int
 tuntap::read(void *buf, std::size_t len, int timeout_ms) noexcept
 {
-	if (0 == timeout_ms) {
-		return ::tuntap_read(_dev.get(), buf, len);
-	} else {
-		return ::tuntap_read_tm(_dev.get(), buf, len, timeout_ms);
-	}
+	return ::tuntap_read_tm(_dev.get(), buf, len, timeout_ms);
 }
 
 int
-tuntap::write(void *buf, std::size_t len) noexcept
+tuntap::write(void *buf, std::size_t len, int timeout_ms) noexcept
 {
-	return ::tuntap_write(_dev.get(), buf, len);
+	return ::tuntap_write_tm(_dev.get(), buf, len, timeout_ms);
 }
 
 void

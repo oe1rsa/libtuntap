@@ -44,7 +44,7 @@ class tuntap
 
 	// IO
 	int read(void *buf, std::size_t len, int timeout_ms = 0) noexcept;
-	int write(void *buf, std::size_t len) noexcept;
+	int write(void *buf, std::size_t len, int timeout_ms = 0) noexcept;
 
 	// System
 	void release() noexcept;
