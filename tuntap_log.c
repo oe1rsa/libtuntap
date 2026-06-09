@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2012, PICHOT Fabien Paul Leonard <pichot.fabienATgmail.com>
  * Copyright (c) 2012, Tristan Le Guern <tleguern@bouledef.eu>
  *
@@ -13,7 +13,7 @@
  * LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
  * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
- **/
+ */
 
 #include <ctype.h>
 #include <stdio.h>
