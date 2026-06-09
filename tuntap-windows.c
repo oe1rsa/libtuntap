@@ -200,7 +200,7 @@ get_valid_adapters(valid_adapters_t *pva)
 			goto clean;
 		}
 
-		if (strcasecmp(data, TAP_WIN_COMPONENT_ID) == 0 || strcasecmp(data, "root\\" TAP_WIN_COMPONENT_ID) == 0) {
+		if (_stricmp(data, TAP_WIN_COMPONENT_ID) == 0 || _stricmp(data, "root\\" TAP_WIN_COMPONENT_ID) == 0) {
 			len = sizeof data;
 			ret = RegQueryValueEx(adapter, "NetCfgInstanceId", NULL, NULL, (LPBYTE)data, &len);
 			if (ret != ERROR_SUCCESS) {
